@@ -12,6 +12,8 @@ koa2模板
 
 项目中配置了 router , mysql , JWT , log
 
+项目推荐 nodejs 版本 >= 18
+
 
 
 ## 下载
