@@ -19,6 +19,7 @@ project:
   # dynamic 动态的, 例如请求者为 https://rgbjs.com 那么跨域允许的域名也为 https://rgbjs.com [推荐]
   # * 允许所有域名跨域, 注意若设置为 * 浏览器将不会携带 cookie [不推荐]
   # notAllowed 不允许跨越 [推荐]
+  #  https://rgbjs.com 具体域名 [推荐]
   cors: "dynamic"
 
   # 数据库字段加密秘钥, 例如加密密码, 控制台中运行命令 npm run createKey 将产生一个随机的 32 位字符
@@ -31,9 +32,9 @@ project:
   token: "dev"
   # 以下两个配置会作为默认参数, 在实际使用过程中也可以通过传递配置对象来覆盖此默认参数
   # token有效时长, 单位秒
-  effectiveTime: 3
+  effectiveTime: 604800
   # 验证 token 时是验证时间是否过期
-  verifyTime: false
+  verifyTime: true
   tokenId: "wktbIsAWKXXlk5CMiQl47uIMUjouqSl5"
 
 # 色彩配置
@@ -55,7 +56,7 @@ color:
 mysql:
   host: "localhost"
   port: 3306
-  database: "file_system"
+  database: "koa2-template"
   user: "root"
   password: "123456"
 
