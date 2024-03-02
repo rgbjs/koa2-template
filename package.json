@@ -1,0 +1,56 @@
+{
+	"type": "module",
+	"name": "koa2-template",
+	"version": "1.0.0",
+	"description": "koa2模版",
+	"main": "./main.js",
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development node ./dev/index.js",
+		"dev:debug": "cross-env NODE_ENV=development node --inspect ./dev/index.js",
+		"start": "node ./main.js",
+		"start:debug": "cross-env NODE_ENV=development node --inspect ./main.js",
+		"createKey": "node ./dev/createKey/index.js",
+		"build": "webpack --mode=production",
+		"preview": "node ./dist/bundle.js"
+	},
+	"imports": {
+		"##root/*": "./*",
+		"##src/*": "./src/*",
+		"#config": "./config/index.js",
+		"#middleware": "./middleware/index.js",
+		"#common": "./common/index.js",
+		"#router": "./src/router/index.js",
+		"#utils": "./src/utils/index.js",
+		"#lib": "./src/lib/index.js",
+		"#model": "./src/model/index.js"
+	},
+	"author": "feiYu <feiyucode@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@koa/bodyparser": "^5.0.0",
+		"assist-tools": "^1.2.0",
+		"bcrypt": "^5.1.1",
+		"chalk": "^5.3.0",
+		"formidable": "^3.5.1",
+		"ip": "^1.1.8",
+		"js-yaml": "^4.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"koa": "^2.14.2",
+		"koa-router": "^12.0.1",
+		"koa-static": "^5.0.0",
+		"lodash": "^4.17.21",
+		"log4js": "^6.9.1",
+		"mysql2": "^3.6.5",
+		"xss": "^1.0.14"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.4",
+		"cross-env": "^7.0.3",
+		"nodemon": "^3.0.2",
+		"webpack": "^5.90.0",
+		"webpack-cli": "^5.1.4"
+	},
+	"volta": {
+		"node": "20.11.0"
+	}
+}

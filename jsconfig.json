@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"##root/*": ["./*"],
+			"##src/*": ["./src/*"],
+			"#config": ["./config/index.js"],
+			"#middleware": ["./middleware/index.js"],
+			"#lib": ["./src/lib/index.js"],
+			"#utils": ["./src/utils/index.js"],
+			"#model": ["./src/model/index.js"],
+			"#router": ["./src/router/index.js"],
+			"#common": ["./common/index.js"]
+		}
+	}
+}

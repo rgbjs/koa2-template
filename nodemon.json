@@ -1,0 +1,16 @@
+{
+  "verbose": true,
+  "watch": [
+    "*.js",
+    "*.json"
+  ],
+  "ignore": [
+    "jsconfig.json",
+    "package*.json",
+    "nodemon.json",
+    "node_modules",
+    "public",
+    "logs",
+    "config"
+  ]
+}

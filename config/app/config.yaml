@@ -1,0 +1,65 @@
+# 项目配置
+project:
+  # 项目启动端口
+  port: 3323
+
+  # 服务启动成功  🎉❤
+  success: "🛠️  服务启动成功 🎉"
+
+  # 服务启动失败, {{port}} 将会被替换成真实运行的端口号
+  fail: "💔 服务启动失败, 请检查 {{port}} 端口是否被占用"
+
+  # 前端资源目录 "/" 相对项目根路径
+  dist: "/public/dist"
+
+  # 接口起始路径
+  api: "/api"
+
+  # 跨域配置
+  # dynamic 动态的, 例如请求者为 https://rgbjs.com 那么跨域允许的域名也为 https://rgbjs.com [推荐]
+  # * 允许所有域名跨域, 注意若设置为 * 浏览器将不会携带 cookie [不推荐]
+  # notAllowed 不允许跨越 [推荐]
+  cors: "dynamic"
+
+  # 数据库字段加密秘钥, 例如加密密码, 控制台中运行命令 npm run createKey 将产生一个随机的 32 位字符
+  encryptKey: "3nyu8tdt98pnlwos5lzqbi68zf3yxfjfcb6g"
+  # 加盐轮数
+  salt: 10
+
+  # token
+  # 空字符串将在每次重启服务时随机生成一个 Token , 生成环境推荐使用随机生成, 开发环境可以固定 Token 以便于调试 [推荐]
+  token: "dev"
+  # 以下两个配置会作为默认参数, 在实际使用过程中也可以通过传递配置对象来覆盖此默认参数
+  # token有效时长, 单位秒
+  effectiveTime: 3
+  # 验证 token 时是验证时间是否过期
+  verifyTime: false
+  tokenId: "wktbIsAWKXXlk5CMiQl47uIMUjouqSl5"
+
+# 色彩配置
+# 色彩选配推荐: https://hao.uisdc.com/color/
+color:
+  # 危险(崩溃)
+  danger: "#F56C6C"
+
+  # 警告
+  warning: "#E6A23C"
+
+  # 正常
+  normal: "#00adb5"
+
+  # 成功
+  success: "#1bd1a5"
+
+# 数据库配置
+mysql:
+  host: "localhost"
+  port: 3306
+  database: "file_system"
+  user: "root"
+  password: "123456"
+
+# 初始账号和密码
+admin:
+  account: "root"
+  password: "123456"
