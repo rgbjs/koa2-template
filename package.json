@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "koa2-template",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "koa2模版",
 	"main": "./main.js",
 	"scripts": {
@@ -16,13 +16,14 @@
 	"imports": {
 		"##root/*": "./*",
 		"##src/*": "./src/*",
+		"#model": "./src/model/index.js",
 		"#config": "./config/index.js",
 		"#middleware": "./middleware/index.js",
 		"#common": "./common/index.js",
 		"#router": "./src/router/index.js",
 		"#utils": "./src/utils/index.js",
 		"#lib": "./src/lib/index.js",
-		"#model": "./src/model/index.js"
+		"#state": "./src/state/index.js"
 	},
 	"author": "feiYu <feiyucode@gmail.com>",
 	"license": "MIT",

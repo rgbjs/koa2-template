@@ -4,13 +4,14 @@
 		"paths": {
 			"##root/*": ["./*"],
 			"##src/*": ["./src/*"],
+			"#common": ["./common/index.js"],
 			"#config": ["./config/index.js"],
 			"#middleware": ["./middleware/index.js"],
 			"#lib": ["./src/lib/index.js"],
 			"#utils": ["./src/utils/index.js"],
 			"#model": ["./src/model/index.js"],
 			"#router": ["./src/router/index.js"],
-			"#common": ["./common/index.js"]
+			"#state": ["./src/state/index.js"]
 		}
 	}
 }

@@ -31,6 +31,7 @@ export default {
 			'#utils': path.join(root, './src/utils/index.js'),
 			'#lib': path.join(root, './src/lib/index.js'),
 			'#model': path.join(root, './src/model/index.js'),
+			'#state': path.join(root, './src/state/index.js')
 		}
 	}
 }
