@@ -46,6 +46,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.4",
+		"clipboardy": "^4.0.0",
 		"cross-env": "^7.0.3",
 		"nodemon": "^3.0.2",
 		"webpack": "^5.90.0",
