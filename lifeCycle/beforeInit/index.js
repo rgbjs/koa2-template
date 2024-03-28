@@ -5,7 +5,7 @@
 import '#config' // 注入配置
 import fs from 'fs/promises'
 
-const { project, file } = globalThis.config
+const { project } = globalThis.config
 
 /** 前端静态资源处理 */
 try {
