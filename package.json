@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "koa2-template",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "koa2模版",
 	"main": "./main.js",
 	"scripts": {
