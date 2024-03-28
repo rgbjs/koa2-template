@@ -23,13 +23,9 @@ export const pool = mysql2.createPool({
 })
 
 pool.on('error', (err) => {
-	if (project.isLog) {
-		const text = `\n    错误类型: ${err.name}\n` + `    错误信息: ${err.message}\n` + `    错误堆栈: ${err.stack}`
-		defaultLog.error('mysql错误', err, '\n')
-		errorLog.error(text)
-		return
-	}
-	console.log(err, '\n')
+	const text = `\n    错误类型: ${err.name}\n` + `    错误信息: ${err.message}\n` + `    错误堆栈: ${err.stack}`
+	defaultLog.error('mysql错误', err, '\n')
+	errorLog.error(text)
 })
 
 /**
@@ -46,16 +42,11 @@ export const query = async (...args) => {
 	} catch (error) {
 		if (error && error.name === 'Error' && error.message === 'No database selected') {
 			await query(`use ${database}`)
-			if (project.isLog) {
-				const text =
-					`\n    错误类型: ${error.name}\n` +
-					`    错误信息: ${error.message}\n` +
-					`    错误堆栈: ${error.stack}`
-				defaultLog.error('mysql错误', error, '\n')
-				errorLog.error(text)
-			} else {
-				console.log('query 连接错误已进行处理 => ', error, '\n')
-			}
+			const text =
+				`\n    错误类型: ${error.name}\n` +
+				`    错误信息: query 连接错误 => ${error.message}\n` +
+				`    错误堆栈: ${error.stack}`
+			errorLog.error(text)
 			return pool.query(...args)
 		} else {
 			throw error
@@ -69,16 +60,11 @@ export const execute = async (...args) => {
 	} catch (error) {
 		if (error && error.name === 'Error' && error.message === 'No database selected') {
 			await query(`use ${database}`)
-			if (project.isLog) {
-				const text =
-					`\n    错误类型: ${error.name}\n` +
-					`    错误信息: ${error.message}\n` +
-					`    错误堆栈: ${error.stack}`
-				defaultLog.error('mysql错误', error, '\n')
-				errorLog.error(text)
-			} else {
-				console.log('execute 连接错误已进行处理 => ', error)
-			}
+			const text =
+				`\n    错误类型: ${error.name}\n` +
+				`    错误信息: execute 连接错误 => ${error.message}\n` +
+				`    错误堆栈: ${error.stack}`
+			errorLog.error(text)
 			return pool.execute(...args)
 		} else {
 			throw error
