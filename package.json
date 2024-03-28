@@ -8,7 +8,7 @@
 		"dev": "cross-env NODE_ENV=development node ./dev/index.js",
 		"dev:debug": "cross-env NODE_ENV=development node --inspect ./dev/index.js",
 		"start": "node ./main.js",
-		"start:debug": "cross-env NODE_ENV=development node --inspect ./main.js",
+		"start:debug": "cross-env NODE_ENV=production node --inspect ./main.js",
 		"createKey": "node ./dev/createKey/index.js",
 		"build": "webpack --mode=production",
 		"preview": "node ./dist/bundle.js"
